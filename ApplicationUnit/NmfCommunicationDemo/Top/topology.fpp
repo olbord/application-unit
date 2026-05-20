@@ -135,6 +135,7 @@ module ApplicationUnit {
         tcpServer.allocate -> bufferManager.bufferGetCallee
         tcpServer.deallocate -> bufferManager.bufferSendIn
         tcpServer.$recv -> moActionBridge.moActionIn
+        moActionBridge.deallocate -> bufferManager.bufferSendIn
     }
 
   }

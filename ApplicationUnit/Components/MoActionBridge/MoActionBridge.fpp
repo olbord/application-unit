@@ -19,6 +19,8 @@ module ApplicationUnit {
         # ----------------------------------------------------------------------
         # General ports
         # ----------------------------------------------------------------------
+        @ Returns buffers to the buffer manager
+        output port deallocate: Fw.BufferSend
 
         @ Command receive
         command recv port cmdIn
