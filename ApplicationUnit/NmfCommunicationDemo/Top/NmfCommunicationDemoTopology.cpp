@@ -55,7 +55,7 @@ void configureTopology() {
     bins.bins[0].numBuffers = 10;
 	bufferManager.setup(0, 0, mallocator, bins);
 
-    tcpServer.configure("127.0.0.1", 1024);
+    tcpServer.configure("0.0.0.0", 1024);
 }
 
 void setupTopology(const TopologyState& state) {
