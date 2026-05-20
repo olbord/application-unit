@@ -28,6 +28,10 @@ void MoActionBridge ::cmdResponseIn_handler(FwIndexType portNum,
 }
 
 void MoActionBridge ::moActionIn_handler(FwIndexType portNum, Fw::Buffer& buffer, const Drv::ByteStreamStatus& status) {
+    if (status != Drv::ByteStreamStatus::RECV_OK) {
+        return;
+    } 
+
     MoActionPdu pdu;
     this->log_ACTIVITY_LO_ActionDispatched(pdu.get_actionId());
 }
